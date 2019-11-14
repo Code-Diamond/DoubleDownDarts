@@ -38,8 +38,7 @@ namespace DoubleDownDarts
             {
                 Console.WriteLine("Hit the double 1.");
                 input = Console.ReadLine();
-                int dart = Convert.ToInt32(input);
-                if (dart == 1)
+                if (input == "d1")
                 {
                     Console.WriteLine("Congrats you win!");
                     System.Environment.Exit(0);
@@ -60,8 +59,7 @@ namespace DoubleDownDarts
                     {
                         Console.WriteLine("Hit the double " + number);
                         input = Console.ReadLine();
-                        int dart = Convert.ToInt32(input);
-                        if (dart == number)
+                        if (input == "d"+number.ToString())
                         {
                             numberOfDoublesAchieved++;
                             number = rand.Next(20);
@@ -79,26 +77,61 @@ namespace DoubleDownDarts
                             cricketArray[5]
                             );
                         input = Console.ReadLine();
-                        int dart = Convert.ToInt32(input);
-                        switch (dart)
+                        switch (input)
                         {
-                            case 20:
+                            case "20":
                                 cricketArray[0]--;
                                 break;
-                            case 19:
+                            case "19":
                                 cricketArray[1]--;
                                 break;
-                            case 18:
+                            case "18":
                                 cricketArray[2]--;
                                 break;
-                            case 17:
+                            case "17":
                                 cricketArray[3]--;
                                 break;
-                            case 16:
+                            case "16":
                                 cricketArray[4]--;
                                 break;
-                            case 15:
+                            case "15":
                                 cricketArray[5]--;
+                                break;
+                            case "d20":
+                                cricketArray[0]-=2;
+                                break;
+                            case "d19":
+                                cricketArray[1]-=2;
+                                break;
+                            case "d18":
+                                cricketArray[2]-=2;
+                                break;
+                            case "d17":
+                                cricketArray[3]-=2;
+                                break;
+                            case "d16":
+                                cricketArray[4]-=2;
+                                break;
+                            case "d15":
+                                cricketArray[5]-=2;
+                                break;
+                            case "t20":
+                                cricketArray[0]-=3;
+                                break;
+                            case "t19":
+                                cricketArray[1]-=3;
+                                break;
+                            case "t18":
+                                cricketArray[2]-=3;
+                                break;
+                            case "t17":
+                                cricketArray[3]-=3;
+                                break;
+                            case "t16":
+                                cricketArray[4]-=3;
+                                break;
+                            case "t15":
+                                cricketArray[5]-=3;
                                 break;
                         }
 
